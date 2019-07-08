@@ -1,24 +1,30 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export default function hook_useSubscription(pubName, ...subOpts) {
   const [loading, setLoading] = useState(true)
-  let comp = null
-  let handle = null
+  let comp = useRef(null)
+  let handle = useRef(null)
 
   const stopComp = () => {
-    comp && comp.stop()
-    handle && handle.stop()
-    comp = null 
-    handle = null
+    if (comp.current) {
+      comp.current.stop()
+      comp.current = null
+    }
+    if (handle.current) {
+      handle.current.stop()
+      handle.current = null
+
+      console.log('unsub', pubName, subOpts)
+    }
   }
 
   useEffect(() => {
     stopComp()
     Tracker.autorun((currentComp) => {
-      comp = currentComp
+      comp.current = currentComp
 
-      handle = Meteor.subscribe(pubName, ...subOpts)
-      setLoading(!handle.ready())
+      handle.current = Meteor.subscribe(pubName, ...subOpts)
+      setLoading(!handle.current.ready())
     })
     return stopComp
   }, [pubName, ...subOpts])
