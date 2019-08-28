@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'boomfly:react-meteor-hooks',
-  version: '1.0.0',
+  name: 'afrokick:react-meteor-hooks',
+  version: '0.3.2',
   summary: 'React Hooks for Meteor.',
-  git: 'https://github.com/boomfly/react-meteor-hooks.git',
+  git: 'https://github.com/afrokick/react-meteor-hooks.git',
   documentation: 'README.md',
 })
 

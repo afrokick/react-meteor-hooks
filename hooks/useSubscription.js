@@ -13,8 +13,6 @@ export default function hook_useSubscription(pubName, ...subOpts) {
     if (handle.current) {
       handle.current.stop()
       handle.current = null
-
-      console.log('unsub', pubName, subOpts)
     }
   }
 
