@@ -1,7 +1,7 @@
 import { checkNpmVersions } from 'meteor/tmeasday:check-npm-versions'
 
 checkNpmVersions({
-  'react': '16.8.6'
+  'react': '16.8.6',
 }, 'boomfly:react-meteor-hooks')
 
 import useTracker from './hooks/useTracker'

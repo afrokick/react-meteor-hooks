@@ -26,10 +26,10 @@
   "homepage": "https://github.com/andruschka/react-meteor-hooks#readme",
   "dependencies": {},
   "peerDependencies": {
-    "react": "^16.8.5"
+    "react": "^16.8.6"
   },
   "devDependencies": {
-    "eslint": "^5.15.3",
+    "eslint": "^6.2.2",
     "eslint-config-parcellab": "^0.1.0",
     "parcel": "^1.12.3"
   }
