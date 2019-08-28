@@ -1,15 +1,19 @@
 {
-  "name": "react-meteor-hooks",
+  "name": "@itgenio/react-meteor-hooks",
   "version": "0.3.2",
   "description": "React Hooks for Meteor.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "parcel build index.js -t node --no-cache --no-source-maps"
+    "build": "parcel build index.js -t node --no-cache --no-source-maps",
+    "prepublish": "npm run build"
   },
   "types": "typings.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andruschka/react-meteor-hooks.git"
+    "url": "git+https://github.com/afrokick/react-meteor-hooks.git"
+  },
+  "release": {
+    "branch": "master"
   },
   "keywords": [
     "react",
@@ -21,9 +25,9 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andruschka/react-meteor-hooks/issues"
+    "url": "https://github.com/afrokick/react-meteor-hooks/issues"
   },
-  "homepage": "https://github.com/andruschka/react-meteor-hooks#readme",
+  "homepage": "https://github.com/afrokick/react-meteor-hooks#readme",
   "dependencies": {},
   "peerDependencies": {
     "react": "^16.8.6"
